@@ -1,0 +1,37 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build",
+            "type": "shell",
+            "command": "g++",
+            "args": [
+                "-o",
+                "cafe_management",
+                "main.cpp",
+                "MainWindow.cpp",
+                "Database.cpp",
+                "Employee.cpp",
+                "Product.cpp",
+                "Menu.cpp",
+                "Order.cpp",
+                "Table.cpp",
+                "Customer.cpp",
+                "CafeManagement.cpp",
+                "-IC:/Qt/6.7.3/mingw_64/include",  // Thư mục chứa tệp .h của Qt
+                "-IC:/sqlite-amalgamation-3470000", // Thư mục chứa tệp .h của SQLite
+                "-LC:/Qt/6.7.3/mingw_64/lib",       // Thư mục chứa tệp .lib của Qt
+                "-lQt6Widgets",
+                "-lQt6Core",
+                "-lQt6Sql",
+                "-lsqlite3"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": ["$gcc"],
+            "detail": "Generated task for building Cafe Management application."
+        }
+    ]
+}

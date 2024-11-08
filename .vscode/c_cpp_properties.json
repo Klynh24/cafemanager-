@@ -1,0 +1,21 @@
+{
+    "configurations": [
+        {
+            "name": "Win32",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "C:\\sqlite-amalgamation-3470000\\sqlite-amalgamation-3470000", 
+                "C:\\Qt\\6.7.3\\mingw_64\\include", 
+                "C:\\Qt\\6.7.3\\mingw_64\\include\\QtWidgets",
+                "C:\\Qt\\6.7.3\\mingw_64\\include\\QtCore", 
+                "C:\\Users\\OS\\OneDrive - The University of Technology/Desktop/Code-VS/cafemanager"
+            ],
+            "defines": [],
+            "compilerPath": "C:\\mingw64\\bin\\g++.exe",
+            "cStandard": "c11",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "gcc-x64"
+        }
+    ],
+    "version": 4
+}
