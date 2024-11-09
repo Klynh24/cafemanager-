@@ -1,9 +1,17 @@
-cmake_minimum_required(VERSION 3.16)
-project(CafeManagementApp)
+cmake_minimum_required(VERSION 3.5)
+project(CafeManager)
 
-find_package(Qt6 REQUIRED COMPONENTS Widgets Sql)
+set(CMAKE_CXX_STANDARD 17)
 
-add_executable(CafeManagement main.cpp MainWindow.cpp Database.cpp Employee.cpp)
-target_include_directories(CafeManagement PRIVATE "C:/Qt/6.7.3/mingw_64/include" "C:/sqlite-amalgamation-3470000")
+# Tìm Qt
+find_package(Qt6 REQUIRED COMPONENTS Widgets)
 
-target_link_libraries(CafeManagement PRIVATE Qt6::Widgets Qt6::Sql sqlite3)
+# Thêm các file mã nguồn
+set(SOURCES src/MainWindow.cpp src/main.cpp)
+set(HEADERS src/MainWindow.h)
+
+# Tạo executable
+add_executable(${PROJECT_NAME} ${SOURCES} ${HEADERS})
+
+# Link Qt với dự án
+target_link_libraries(${PROJECT_NAME} Qt6::Widgets)

@@ -2,29 +2,31 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-#include "CafeManagement.h"
-
-QT_BEGIN_NAMESPACE
-namespace Ui { class MainWindow; }
-QT_END_NAMESPACE
+#include <QStackedWidget>
+#include <QPushButton>
+#include <QWidget>
 
 class MainWindow : public QMainWindow {
     Q_OBJECT
 
 public:
-    MainWindow(QWidget *parent = nullptr);
-    ~MainWindow();
-
-private slots:
-    void on_addEmployeeButton_clicked();
-    void on_displayEmployeesButton_clicked();
-    void on_addProductButton_clicked();
-    void on_displayMenuButton_clicked();
-    void on_createOrderButton_clicked();
+    explicit MainWindow(QWidget *parent = nullptr);
+    void setUserRole(const QString &role);
 
 private:
-    Ui::MainWindow *ui;
-    CafeManagement cafeManagement;  // Đối tượng quản lý quán cà phê
+    QStackedWidget *stackedWidget;
+    QWidget *createLoginScreen();
+    QWidget *createMenuScreen();
+    QWidget *createStaffManagementScreen();
+    QWidget *createOrderManagementScreen();
+    QWidget *createTableManagementScreen();
+    QWidget *createReportScreen();
+
+    QPushButton *loginButton;
+    QString userRole;
+
+    void setupUI();
+    void showScreen(QWidget *screen);
 };
 
 #endif // MAINWINDOW_H

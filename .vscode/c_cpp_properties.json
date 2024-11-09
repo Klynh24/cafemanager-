@@ -7,7 +7,8 @@
                 "C:\\sqlite-amalgamation-3470000\\sqlite-amalgamation-3470000", 
                 "C:\\Qt\\6.7.3\\mingw_64\\include", 
                 "C:\\Qt\\6.7.3\\mingw_64\\include\\QtWidgets",
-                "C:\\Qt\\6.7.3\\mingw_64\\include\\QtCore", 
+                "C:\\Qt\\6.7.3\\mingw_64\\include\\QtCore",
+                "C:\\Qt\\Tools\\QtDesignStudio\\qt6_design_studio_reduced_version\\include", 
                 "C:\\Users\\OS\\OneDrive - The University of Technology/Desktop/Code-VS/cafemanager"
             ],
             "defines": [],
